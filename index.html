@@ -14,12 +14,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 250px;
+    height: 200px;
   }
   #header{
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
   #info{
     position: relative;
@@ -29,6 +29,12 @@
     height: auto;
     width: 100%;
     display: block;
+  }
+  #textopresent{
+    text-align: center;
+    width: 50%;
+    font-size: large;
+    margin-left: 50px;
   }
 </style>
 <body>
@@ -43,14 +49,14 @@
   <!-- Bienvenida -->
   <header class="text-center py-5 bg-light" id="header" >
     <div>
-        <h1 class="fw-bold">Bienvenido a Dental Center</h1>
     <img src="logo.jpg" alt="">
     </div>
-    <div class="card shadow h-100" style="text-align: center; background-color: blue;">
-      <h4>ATENCION ESPECIALIZADA
-EN CUALQUIER AREA DE ODONTOLOGIA</h4>
+    <div id="textopresent">
+      <p>ATENCION ESPECIALIZADA EN CUALQUIER AREA DE ODONTOLOGIA,
+        ATENCION ESPECIALIZADA EN CUALQUIER AREA DE ODONTOLOGIA,
+      ATENCION ESPECIALIZADA EN CUALQUIER AREA DE ODONTOLOGIA
+    ATENCION ESPECIALIZADA EN CUALQUIER AREA DE ODONTOLOGIA</p>
     </div>
-    
   </header>
 <div id="info">
   <img src="info.jpg" alt="" id="imginfo">
@@ -63,7 +69,7 @@ EN CUALQUIER AREA DE ODONTOLOGIA</h4>
       <div class="col-md-4">
         <div class="card shadow h-100">
           <div class="card-body">
-            <div class="mb-3 fs-1 text-danger">❤️</div>
+            <div class="mb-3 fs-1 text-danger">🦷</div>
             <h5 class="card-title">Nosotros</h5>
             <br>
             <p class="card-text">Somos especialistas listos para ayudarte</p>
