@@ -42,6 +42,8 @@
     #servicios { background: linear-gradient(135deg, #ff9966, #ff5e62); color: white; }
     #portafolio { background: linear-gradient(135deg, #56ab2f, #a8e063); color: white; }
     #contacto { background: linear-gradient(135deg, #36d1dc, #5b86e5); color: white; }
+    #servicios { background: linear-gradient(135deg, #667eea, #764ba2); color: white; }
+
 
     h1 {
       font-size: 3rem;
@@ -93,15 +95,21 @@
     background-position: center;
     background-size: cover;
   }
+  #limpieza,#extraccion,#endodoncia{
+    height: 100px;
+    width: 150px;
+  }
   </style>
 </head>
 <body>
   <!-- Navegación -->
   <nav>
     <a href="#inicio">Inicio</a>
-    <a href="#servicios">Informacion</a>
-    <a href="#portafolio">Especialistas</a>
+    <a href="#informacion">Informacion</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#especialistas">Especialistas</a>
     <a href="#contacto">Contacto</a>
+
   </nav>
 
   <!-- Secciones -->
@@ -111,7 +119,7 @@
   
   </section>
 
-  <section id="servicios">
+  <section id="informacion">
     <div class="row g-4 text-center">
 
       <!-- Nosotros -->
@@ -121,13 +129,16 @@
             <div class="mb-3 fs-1 text-danger">🦷</div>
             <h5 class="card-title">Nosotros</h5>
             <br>
-            <p class="card-text">Somos especialistas listos para ayudarte</p>
-            <a href="nosotros.html" class="btn btn-primary">Ver más</a>
+            <p class="card-text">Somos especialistas listos para ayudarte,
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, aut quae reprehenderit maiores esse dolorem, deleniti necessitatibus hic, 
+                accusamus ex quod! Magnam hic ea doloremque voluptatibus a animi eveniet distinctio.
+            </p>
+            <!--<a href="nosotros.html" class="btn btn-primary">Ver más</a>-->
           </div>
         </div>
       </div>
 
-      <!-- Haz tu cita -->
+      
       <div class="col-md-4">
         <div class="card shadow h-100">
           <div class="card-body">
@@ -140,7 +151,6 @@
         </div>
       </div>
 
-      <!-- Chat -->
       <div class="col-md-4">
         <div class="card shadow h-100">
           <div class="card-body">
@@ -153,7 +163,40 @@
     </div>
   </section>
 
-  <section id="portafolio">
+  <section id="servicios">
+    <h2 style="text-align: center;">Nuestros Servicios</h2>
+    <div class="row g-4 mt-4">
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <div class="card-body text-center">
+            <h5>Extracciones</h5>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio reprehenderit laudantium blanditiis enim quo rerum omnis, delectus hic natus, corrupti, amet labore explicabo tempora quaerat. Suscipit assumenda maxime quibusdam et!.</p>
+            <img src="extraccion.jpg" alt="" id="extraccion">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <div class="card-body text-center">
+            <h5>Endodoncias</h5>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel fugiat eveniet tempore vero necessitatibus ut deserunt, optio iste placeat, id rerum. Provident velit exercitationem officiis placeat quae consectetur veritatis iure!</p>
+            <img src="endodoncia.png" alt="" id="endodoncia">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <div class="card-body text-center">
+            <h5>Limpiezas</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum cum fugit repudiandae distinctio perspiciatis pariatur iusto molestias, odio eveniet magni rem maxime quod, quis ad sequi nemo voluptatibus ullam magnam!.</p>
+            <img src="limpieza.jpg" alt="" id="limpieza">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="especialistas">
     <div>
       <h1>Nuestros Especialistas</h1>
       <p>Aquí van tus proyectos destacados, con animaciones que aparecen al hacer scroll.</p>
