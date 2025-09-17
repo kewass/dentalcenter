@@ -23,7 +23,6 @@
     section {
       min-height: 100vh; /* cada sección ocupa la pantalla completa */
       display: flex;
-      align-items: center;
       justify-content: center;
       text-align: center;
       padding: 2rem;
@@ -147,12 +146,57 @@
         <div class="card shadow h-100">
           <div class="card-body">
             <div class="mb-3 fs-1 text-primary">👤</div>
-            <h5 class="card-title">Nuestros especialistas</h5>
-            <br>
-            <p class="card-text">Conoce a nuestro personal profesionalmente capacitado para brindarte la mejor atencion</p>
-            <a href="especialistas.html" class="btn btn-success">Conoce a nuestros especialistas</a>
-          </div>
-        </div>
+            <h5 class="card-title">Contactanos</h5>
+               <form name="contacto-paciente" method="POST" data-netlify="true">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="nombre" class="form-label">Nombre(s)</label>
+                      <input type="text" class="form-control" id="nombre" placeholder="Ej. Ana" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="apellidos" class="form-label">Apellidos</label>
+                      <input type="text" class="form-control" id="apellidos" placeholder="Ej. García López" required>
+                    </div>
+                  </div>
+<!--
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                      <input type="date" class="form-control" id="fechaNacimiento" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="genero" class="form-label">Género</label>
+                      <select class="form-select" id="genero">
+                        <option selected>Seleccionar...</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="otro">Prefiero no especificar</option>
+                      </select>
+                    </div>
+                  </div>
+                -->
+                  <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="tel" class="form-control" id="telefono" placeholder="Ej. 877 123 4567" required>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ej. ana.garcia@correo.com" required>
+                      </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="direccion" class="form-label">Deja tu mensaje</label>
+                    <textarea class="form-control" id="direccion" rows="3" placeholder=""></textarea>
+                  </div>
+                  
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                  </div>
+                </form>
+              </div>          
+      </div>
       </div>
 
       <div class="col-md-4">
