@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <title>Dental Center Scroll</title>
+  <title>Dental Center </title>
   <style>
     /* Estilos generales */
     * {
@@ -37,7 +37,6 @@
     }
 
     /* Colores distintos para diferenciar secciones */
-    #inicio { background: linear-gradient(135deg, #667eea, #764ba2); color: white; }
     #servicios { background: linear-gradient(135deg, #ff9966, #ff5e62); color: white; }
     #portafolio { background: linear-gradient(135deg, #56ab2f, #a8e063); color: white; }
     #contacto { background: linear-gradient(135deg, #36d1dc, #5b86e5); color: white; }
@@ -86,15 +85,8 @@
     width: 100%;
     display: block;
   }
-  #inicio{
-    display: flex;
-    min-height: 50vh;
-    background-image: url(bannerCenter.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
-  #limpieza,#extraccion,#endodoncia{
+ 
+  #limpieza,#extraccion,#endodoncia,#brackets,#corona,#resina{
     height: 100px;
     width: 150px;
   }
@@ -126,7 +118,89 @@
 #contacto{
   min-height: auto;
   padding: 0;
-}
+} /* --- INICIO: ESTILOS PARA LA GALERÍA MANUAL --- */
+
+    .slideshow-container {
+      width: 100%;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Ocultar las imágenes por defecto */
+    .mySlides {
+      display: none;
+      height: 100vh; /* Ocupa toda la altura de la sección */
+    }
+    .mySlides img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Asegura que la imagen cubra el espacio */
+    }
+
+    /* Botones de Anterior y Siguiente */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    /* Puntos de navegación */
+    .dot-container {
+        text-align: center;
+        padding: 20px;
+        position: absolute;
+        bottom: 15px;
+        width: 100%;
+    }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+
+    /* --- FIN: ESTILOS PARA LA GALERÍA MANUAL --- */
+
+    @media (max-width: 768px) {
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 95%; 
+        left: 2.5%; 
+        transform: translateX(0); 
+        top: 10px; 
+      }
+
+      nav a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -141,10 +215,43 @@
   </nav>
 
   <!-- Secciones -->
-  <section id="inicio">
-    <div>
+   <section id="inicio">
+    <div class="slideshow-container">
+    
+        <div class="mySlides">
+            <img src="logo.jpg" alt="Imagen 1">
+        </div>
+    
+        <div class="mySlides">
+            <img src="imagen1.jfif" alt="Imagen 2">
+        </div>
+    
+        <div class="mySlides">
+            <img src="imagen2.jfif" alt="Imagen 3">
+        </div>
+        <div class="mySlides">
+            <img src="imagen3.jfif" alt="Imagen 4">
+        </div>
+        <div class="mySlides">
+            <img src="imagen4.jfif" alt="Imagen 5">
+        </div>
+         <div class="mySlides">
+            <img src="imagen5.jfif" alt="Imagen 6">
+        </div>
+    
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
     </div>
-  
+    
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+        <span class="dot" onclick="currentSlide(5)"></span> 
+        <span class="dot" onclick="currentSlide(6)"></span> 
+
+    </div>
   </section>
 
   <section id="informacion">
@@ -157,9 +264,16 @@
             <div class="mb-3 fs-1 text-danger">🦷</div>
             <h5 class="card-title">Nosotros</h5>
             <br>
-            <p class="card-text">Somos especialistas listos para ayudarte,
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, aut quae reprehenderit maiores esse dolorem, deleniti necessitatibus hic, 
-                accusamus ex quod! Magnam hic ea doloremque voluptatibus a animi eveniet distinctio.
+            <p class="card-text">
+              Somos un equipo de especialistas listos para cuidar de tu sonrisa. 
+              Ofrecemos atención dental de calidad.
+            </p>
+            <br>
+            <p>
+              Llamanos
+              📞(878) 782 1991
+              <br>
+              📞(830) 325 9427
             </p>
             <!--<a href="nosotros.html" class="btn btn-primary">Ver más</a>-->
           </div>
@@ -198,7 +312,7 @@
       </div>
       <div class="col-md-6 mb-3">
           <label for="email" class="form-label">Correo Electrónico</label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="Ej. ana.garcia@correo.com" required>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Ej. tucorreo@correo.com" required>
       </div>
     </div>
 
@@ -219,8 +333,15 @@
         <div class="card shadow h-100">
           <div class="card-body">
             <div class="mb-3 fs-1">📍</div>
-            <h5 class="card-title">Nuestra Ubicacion</h5>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.498674493969!2d-100.5166474!3d28.704639500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865f8dbcb06793db%3A0x7c8f0f64d63fa7be!2sDental%20Center!5e0!3m2!1ses-419!2smx!4v1758060543867!5m2!1ses-419!2smx" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>          </div>
+            <h5 class="card-title">Nuestra Ubicacion y Horarios</h5>
+            <p>Lunes a Viernes de 9:00am a 7:00pm
+              <br>
+            Sábado de 9:00am a 4:00pm
+            <br>
+             Domingo de 9:00am a 2:00pm</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.498674493969!2d-100.5166474!3d28.704639500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865f8dbcb06793db%3A0x7c8f0f64d63fa7be!2sDental%20Center!5e0!3m2!1ses-419!2smx!4v1758060543867!5m2!1ses-419!2smx" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<br><h8>Padre de las Casas #301 esquina con Matamoros , Piedras Negras, Mexico</h8>
+          </div>
         </div>
       </div>
 
@@ -234,7 +355,9 @@
         <div class="card shadow h-100">
           <div class="card-body text-center">
             <h5>Extracciones</h5>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio reprehenderit laudantium blanditiis enim quo rerum omnis, delectus hic natus, corrupti, amet labore explicabo tempora quaerat. Suscipit assumenda maxime quibusdam et!.</p>
+            <p>
+              Procedimiento seguro para remover un diente que está severamente dañado, fracturado o causa problemas de espacio. Se realiza para aliviar el dolor, tratar infecciones y preparar tu boca para futuros tratamientos restauradores.
+            </p>
             <img src="extraccion.jpg" alt="" id="extraccion">
           </div>
         </div>
@@ -243,7 +366,9 @@
         <div class="card shadow h-100">
           <div class="card-body text-center">
             <h5>Endodoncias</h5>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel fugiat eveniet tempore vero necessitatibus ut deserunt, optio iste placeat, id rerum. Provident velit exercitationem officiis placeat quae consectetur veritatis iure!</p>
+            <p>
+              También conocido como tratamiento de conducto, es la solución ideal para salvar un diente cuya pulpa (nervio) está infectada. Se limpia el interior del diente y se sella para eliminar el dolor y conservar tu pieza dental natural.
+            </p>
             <img src="endodoncia.png" alt="" id="endodoncia">
           </div>
         </div>
@@ -252,8 +377,43 @@
         <div class="card shadow h-100">
           <div class="card-body text-center">
             <h5>Limpiezas</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum cum fugit repudiandae distinctio perspiciatis pariatur iusto molestias, odio eveniet magni rem maxime quod, quis ad sequi nemo voluptatibus ullam magnam!.</p>
+            <p>
+              Esenciales para una salud bucal completa. En este procedimiento preventivo, eliminamos la placa y el sarro acumulado que el cepillado diario no puede quitar, ayudando a prevenir caries, enfermedades de las encías y mal aliento.
+            </p>
             <img src="limpieza.jpg" alt="" id="limpieza">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <div class="card-body text-center">
+            <h5>Brackets</h5>
+            <p>
+              Tratamiento de ortodoncia clásico para corregir la alineación de los dientes y mejorar la mordida. Los brackets mueven gradualmente los dientes a su posición ideal, logrando una sonrisa más estética, funcional y saludable.
+            </p>
+            <img src="brackets.jpg" alt="" id="brackets">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <div class="card-body text-center">
+            <h5>Coronas</h5>
+            <p>
+              Es una funda hecha a la medida que cubre por completo un diente dañado o debilitado para restaurar su forma, tamaño y fuerza. Es la solución ideal para proteger dientes después de una endodoncia, reparar fracturas extensas o mejorar la estética, devolviendo la funcionalidad y apariencia de un diente sano y natural.
+            </p>
+            <img src="corona.jpg" alt="" id="corona">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <div class="card-body text-center">
+            <h5>Resinas</h5>
+            <p>
+              Restauraciones estéticas que se usan para reparar dientes con caries, fracturas leves o para mejorar su forma. Al ser del color del diente, se mimetizan perfectamente con tu sonrisa, ofreciendo un resultado duradero y natural.
+            </p>
+            <img src="resina.jpg" alt="" id="resina">
           </div>
         </div>
       </div>
@@ -350,16 +510,51 @@
     const sections = document.querySelectorAll("section");
 
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    }, { threshold: 0.3 });
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible"); // aparece
+    } else {
+      entry.target.classList.remove("visible"); // desaparece
+    }
+  });
+}, { threshold: 0.2 }); // sensibilidad del efecto
+
 
     sections.forEach(section => {
       observer.observe(section);
     });
+  </script>
+   <script>
+    // --- INICIO: SCRIPT PARA LA GALERÍA MANUAL ---
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Función para avanzar o retroceder
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Función para ir a una imagen específica (con los puntos)
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    // --- FIN: SCRIPT PARA LA GALERÍA MANUAL ---
   </script>
 </body>
 </html>
