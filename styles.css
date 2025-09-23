@@ -1,0 +1,316 @@
+ /* Estilos generales */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      scroll-behavior: smooth;
+      background: #f4f4f4;
+    }
+
+    section {
+      min-height: 100vh; /* cada sección ocupa la pantalla completa */
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Colores distintos para diferenciar secciones */
+    #servicios { background: linear-gradient(135deg, #ff9966, #ff5e62); color: white; }
+    #contacto { background: linear-gradient(135deg, #36d1dc, #5b86e5); color: white; }
+    #specialists { background: linear-gradient(135deg, #667eea, #764ba2); color: white; }
+
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    nav {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      background: rgba(0,0,0,0.5);
+      padding: 10px 15px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(0,0,0,0.8);
+    }
+    #imginfo{
+    height: auto;
+    width: 100%;
+    display: block;
+  }
+  #imgbanner{
+    height: auto;
+    width: 100%;
+    display: block;
+  }
+ 
+  #limpieza,#extraccion,#endodoncia,#brackets,#corona,#resina{
+    height: 100px;
+    width: 150px;
+  }
+  #servicios{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #info{
+    position: relative;
+    width: 100%;
+  }
+@media (max-width: 768px) {
+  
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 95%; 
+    left: 2.5%; 
+    transform: translateX(0); 
+    top: 10px; 
+  }
+
+  nav a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+#contacto{
+  min-height: auto;
+  padding: 0;
+} /* --- INICIO: ESTILOS PARA LA GALERÍA MANUAL --- */
+
+    .slideshow-container {
+      width: 100%;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Ocultar las imágenes por defecto */
+    .mySlides {
+      display: none;
+      height: 100vh; /* Ocupa toda la altura de la sección */
+    }
+    .mySlides img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Asegura que la imagen cubra el espacio */
+    }
+
+    /* Botones de Anterior y Siguiente */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    /* Puntos de navegación */
+    .dot-container {
+        text-align: center;
+        padding: 20px;
+        position: absolute;
+        bottom: 15px;
+        width: 100%;
+    }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+
+    /* --- FIN: ESTILOS PARA LA GALERÍA MANUAL --- */
+
+    @media (max-width: 768px) {
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 95%; 
+        left: 2.5%; 
+        transform: translateX(0); 
+        top: 10px; 
+      }
+
+      nav a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+      }
+    }
+    #contact-section {
+      min-height: auto;
+      padding: 0;
+    }
+    /* --- INICIO: ESTILOS PARA LA GALERÍA MANUAL --- */
+
+    .slideshow-container {
+      width: 100%;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Ocultar las imágenes por defecto */
+    .mySlides {
+      display: none;
+      height: 100vh; /* Ocupa toda la altura de la sección */
+    }
+    .mySlides img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Asegura que la imagen quepa completa */
+    }
+    .ad-Slides img{
+      width: 100%;
+      height: 400px;
+      object-fit: contain;
+    }
+
+    /* Botones de Siguiente y Anterior */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    /* Puntos de navegación */
+    .dot-container {
+        text-align: center;
+        padding: 20px;
+        position: absolute;
+        bottom: 15px;
+        width: 100%;
+    }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+/* --- INICIO: ESTILOS PARA TARJETAS DE ESPECIALISTAS (VERSIÓN CORREGIDA) --- */
+
+/* 1. Le damos una forma cuadrada y fija al contenedor de la imagen */
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* LA CLAVE: Asegura que el contenedor sea siempre un cuadrado */
+  overflow: hidden;
+  background-color: #e0e0e0; /* Un color de fondo mientras carga la imagen */
+}
+
+/* 2. Hacemos que CUALQUIER imagen dentro del contenedor lo llene perfectamente */
+.card-image-wrapper img {
+  position: absolute; /* Usamos position absolute para un mejor control */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 'cover' es ideal para fotos de perfil, las ajusta sin deformar */
+}
+
+/* 3. Estilos para los botones de navegación del carrusel */
+.card-prev, .card-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  user-select: none;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 5; /* Asegura que estén por encima de la imagen */
+}
+
+.card-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.card-prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.card-prev:hover, .card-next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* --- FIN: ESTILOS CORREGIDOS --- */
